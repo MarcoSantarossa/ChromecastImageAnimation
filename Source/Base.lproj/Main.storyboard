@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ChromecastImageAnimation" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b4n-tn-Rnm">
+                                <rect key="frame" x="0.0" y="283.5" width="375" height="120"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cast_disconnected" translatesAutoresizingMaskIntoConstraints="NO" id="sAh-hy-8Ft" userLabel="ChromecastImageView">
+                                        <rect key="frame" x="175" y="0.0" width="24" height="24"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="24" id="Nvo-Nx-9eW"/>
+                                            <constraint firstAttribute="width" constant="24" id="Q4T-3P-yaG"/>
+                                        </constraints>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qcn-Q1-Y0J" userLabel="ConnectButton">
+                                        <rect key="frame" x="87.5" y="90" width="200" height="30"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="zMD-2R-RFL"/>
+                                        </constraints>
+                                        <state key="normal" title="Connect"/>
+                                        <connections>
+                                            <action selector="onConnectButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4a8-cw-nvz"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="sAh-hy-8Ft" firstAttribute="top" secondItem="b4n-tn-Rnm" secondAttribute="top" id="B0z-rv-0xB"/>
+                                    <constraint firstItem="sAh-hy-8Ft" firstAttribute="centerX" secondItem="b4n-tn-Rnm" secondAttribute="centerX" id="Cer-Uw-WZm"/>
+                                    <constraint firstAttribute="bottom" secondItem="qcn-Q1-Y0J" secondAttribute="bottom" id="RAY-2v-Niu"/>
+                                    <constraint firstItem="qcn-Q1-Y0J" firstAttribute="centerX" secondItem="b4n-tn-Rnm" secondAttribute="centerX" id="eFe-Tq-FGa"/>
+                                    <constraint firstAttribute="height" constant="120" id="xQp-Rf-jy3"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="b4n-tn-Rnm" secondAttribute="trailing" id="WSv-ig-Zse"/>
+                            <constraint firstItem="b4n-tn-Rnm" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="tdd-bI-XkH"/>
+                            <constraint firstItem="b4n-tn-Rnm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="vE0-y3-Qmr"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="chromecastImageView" destination="sAh-hy-8Ft" id="w0E-ni-mgg"/>
+                        <outlet property="connectButton" destination="qcn-Q1-Y0J" id="shM-sM-sOi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-862" y="-36"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="cast_disconnected" width="24" height="24"/>
+    </resources>
+</document>
